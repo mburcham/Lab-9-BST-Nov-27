@@ -27,17 +27,9 @@ CustomMakefile=
 IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
-CompilerSettings=
-
-[Unit4]
-FileName=BSTree.cpp
-CompileCpp=1
-Folder=
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
+CompilerSettings=0000000100000000000000000
+LogOutput=
+LogOutputEnabled=0
 
 [Unit1]
 FileName=BSTree.h
@@ -51,16 +43,6 @@ BuildCmd=
 
 [Unit2]
 FileName=config.h
-CompileCpp=1
-Folder=Project1
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
-[Unit3]
-FileName=test9.cpp
 CompileCpp=1
 Folder=Project1
 Compile=1
@@ -86,4 +68,25 @@ OriginalFilename=
 ProductName=
 ProductVersion=
 AutoIncBuildNr=0
+SyncProduct=0
+
+[Unit3]
+FileName=BSTree.cpp
+CompileCpp=1
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit4]
+FileName=test9.cpp
+CompileCpp=1
+Folder=Project1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
 

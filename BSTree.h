@@ -29,10 +29,18 @@ class BSTree                                     // KeyType : key field
 
     // Destructor
     ~BSTree ();
+	
+
 
     // Binary search tree manipulation operations
-    void insert ( const DataType& newDataItem );  // Insert data item
-    bool retrieve ( const KeyType& searchKey, DataType& searchDataItem ) const;
+
+//	BSTree& traverse();
+//	void search(KeyType data, char& direction = 'l');
+
+	char search(KeyType data);
+	void insert ( const DataType& newDataItem );  // Insert data item
+	//bool retrieve (KeyType searchKey, DataType& searchDataItem ) const;
+    bool retrieve ( const KeyType& searchKey, DataType& searchDataItem );
                                                   // Retrieve data item
     bool remove ( const KeyType& deleteKey );            // Remove data item
     void writeKeys () const;                      // Output keys
@@ -46,10 +54,11 @@ class BSTree                                     // KeyType : key field
     void showStructure () const;
 
     // In-lab operations
-    int getHeight () const;                       // Height of tree
+    int getHeight ();                       // Height of tree
     int getCount () const;			  // Number of nodes in tree
-    void writeLessThan ( const KeyType& searchKey ) const; // Output keys < searchKey
-    int counter;   //helper member
+    void writeLessThan ( const KeyType& searchKey ); // Output keys < searchKey
+    
+
 
   protected:
 
@@ -69,11 +78,22 @@ class BSTree                                     // KeyType : key field
     // Recursive helpers for the public member functions -- insert
     // prototypes of these functions here.
     void showHelper      ( BSTreeNode *p, int level ) const;
-
-
-    // Data member
+    //BSTreeNode* findMin(BSTreeNode* node)const;
+    void writeKeysHelper(BSTreeNode *node) const;
+   	void helpClear(BSTreeNode* gone);	
+    int heightHelper(BSTreeNode* heightNode);
+	typename BSTree<DataType, KeyType>::BSTreeNode* assignHelper(BSTreeNode* copy);
+	void writeLessHelper(BSTreeNode* pointer, KeyType searchkey); 
+	//bool removeHelper(KeyType deleteKey, BSTreeNode* lostNode);
+	//typename BSTree<DataType,KeyType>::BSTreeNode* findMin(BSTreeNode* node)  {
+	
+	// Data member
+	BSTreeNode *cursor;
     BSTreeNode *root;   // Pointer to the root node
+    int counter;   //helper member
 };
 
 #endif	// define BSTREE_H
+
+
 

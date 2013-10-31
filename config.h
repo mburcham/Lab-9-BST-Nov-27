@@ -5,6 +5,6 @@
  */
 
 #define LAB9_TEST1	1		// Programming Exercise 2: getCount
-#define LAB9_TEST2	0		// Programming Exercise 2: getHeight
-#define LAB9_TEST3	0		// Programming Exercise 3: writeLessThan
+#define LAB9_TEST2	1    	// Programming Exercise 2: getHeight
+#define LAB9_TEST3	1		// Programming Exercise 3: writeLessThan
 
